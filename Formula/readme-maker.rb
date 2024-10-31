@@ -1,7 +1,7 @@
 class ReadmeMaker < Formula
   desc "A CLI tool to generate structured README.md files using OpenAI API."
-  homepage "https://github.com/CalebSargeant/readme-maker"
-  url "https://github.com/CalebSargeant/readme-maker/archive/refs/tags/v0.1.0.tar.gz"
+  homepage "https://github.com/CalebSargeant/homebrew-readme-maker"
+  url "https://github.com/CalebSargeant/homebrew-readme-maker/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "383aba3b9c9c3fb19312f6d8d9eabc2c2ff629e0eef1ffd83ba454583aafd139"
   license "MIT"
 
