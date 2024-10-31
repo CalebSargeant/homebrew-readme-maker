@@ -2,7 +2,7 @@ class ReadmeMaker < Formula
   desc "A CLI tool to generate structured README.md files using OpenAI API."
   homepage "https://github.com/CalebSargeant/readme-maker"
   url "https://github.com/CalebSargeant/readme-maker/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "5aa1bc8f89d4326990c129ab6a94a6d6d7b2d12c1be98c3492f65b3a92fba85a"
+  sha256 "74636617b9e30bc0bbbdb80db7e1c92e151ee3117aa62deb8f32b8d67a0e6140"
   license "MIT"
 
   depends_on "python@3.9"  # Ensure Python 3.9 is installed
