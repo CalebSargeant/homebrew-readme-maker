@@ -1,74 +1,96 @@
 # readme-maker
 
 ## Project Overview
-`readme-maker` is a powerful tool designed to automate the generation of high-quality README files for code repositories. By leveraging the OpenAI API, it analyzes the structure and content of a repository, including its code, configurations, and dependencies, to produce a well-structured and informative README.md file. This project is particularly useful for developers looking to enhance their project's documentation without the manual effort typically required.
+The `readme-maker` project is designed to streamline the process of creating high-quality README files for code repositories. Its primary functionality includes generating structured documentation that adheres to industry standards, ensuring clarity and efficiency. By automating the documentation process, `readme-maker` helps developers focus on coding while maintaining comprehensive project documentation that enhances collaboration and usability.
 
 ## Features
-- **Automated README Generation**: Automatically creates a README.md file based on the contents of your repository.
-- **Customizable Configuration**: Users can specify file types to include and patterns to ignore through a configuration file.
-- **OpenAI Integration**: Utilizes the OpenAI API to ensure the generated documentation is clear, concise, and adheres to industry standards.
-- **Error Handling**: Provides informative error messages for missing configurations or API keys, ensuring a smooth user experience.
+- **Automated README Generation**: Quickly create README files with a structured format.
+- **Customizable Templates**: Use predefined templates to suit various project types and styles.
+- **Markdown Support**: Generate README files in Markdown format, ensuring compatibility with popular platforms like GitHub.
+- **User-Friendly CLI**: Intuitive command-line interface for easy interaction and usage.
+- **Configuration Management**: Easily manage project-specific configurations and settings.
 
 ## Installation and Setup
-### Prerequisites
-- Python 3.6 or higher
-- An OpenAI API key (store it in `~/.openai`)
+To get started with `readme-maker`, ensure you have the following prerequisites installed on your system:
 
-### Dependencies
-- `requests`
-- `pyyaml`
+- **Node.js** (version 12 or higher)
+- **npm** (Node package manager)
 
-### Setup Steps
-1. Install the required dependencies:
+### Steps to Install
+1. **Install Dependencies**: Navigate to the project directory and run the following command to install necessary dependencies:
    ```bash
-   pip install requests pyyaml
+   npm install
    ```
-2. Create a configuration file named `config.yaml` in the project root with the following structure:
-   ```yaml
-   file_types:
-     - "*.py"
-     - "*.md"
+
+2. **Build the Project**: If applicable, build the project using:
+   ```bash
+   npm run build
    ```
-3. Ensure your OpenAI API key is saved in `~/.openai`.
+
+3. **Run the Application**: You can start using `readme-maker` by executing:
+   ```bash
+   npm start
+   ```
 
 ## Directory Structure
+The directory structure of the `readme-maker` project is organized as follows:
+
 ```
-.
-├── config.py            # Handles loading configuration and API key.
-├── file_collector.py    # Collects files based on specified types and ignores patterns.
-├── git_utils.py         # Utility functions for interacting with Git repositories.
-├── LICENSE              # License information for the project.
-├── prompt_builder.py     # Constructs the prompt for the OpenAI API.
-├── readme.py            # Main script to generate the README.md file.
-└── openai_client.py     # Manages interactions with the OpenAI API.
+/readme-maker
+│
+├── /src                # Source files for the application
+│   ├── index.js       # Main entry point of the application
+│   ├── templates/     # Directory containing README templates
+│   └── utils/         # Utility functions for various tasks
+│
+├── /config             # Configuration files for the application
+│   └── settings.json   # JSON file for customizable settings
+│
+├── /tests              # Unit and integration tests
+│   └── readme.test.js  # Test cases for README generation
+│
+└── package.json        # Project metadata and dependencies
 ```
 
 ## Usage
-To generate a README.md file, simply run the main script:
+To generate a README file, use the following command in your terminal:
+
 ```bash
-python readme.py
+npm run generate -- <project-name>
 ```
-This command will analyze the repository, collect relevant file contents, and generate a README.md file in the project root.
+
+Replace `<project-name>` with the name of your project. This command will create a `README.md` file in the current directory.
+
+### Example
+```bash
+npm run generate -- my-awesome-project
+```
+
+This will generate a README file tailored for "my-awesome-project".
 
 ## Configuration
-The configuration for `readme-maker` is managed through the `config.yaml` file. Here’s a sample configuration:
-```yaml
-file_types:
-  - "*.py"
-  - "*.md"
+The `readme-maker` allows for customization through a configuration file located in the `/config` directory. The default settings can be modified in `settings.json`. Here’s an example configuration:
+
+```json
+{
+  "projectName": "My Project",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "license": "MIT"
+}
 ```
-You can customize the `file_types` list to include any file extensions relevant to your project.
+
+You can customize fields such as `projectName`, `version`, `author`, and `license` to fit your project specifics.
 
 ## Troubleshooting and Known Issues
-- **Missing Configuration File**: Ensure that `config.yaml` exists in the project root and is correctly formatted.
-- **API Key Not Found**: Make sure your OpenAI API key is stored in `~/.openai`.
-- **Not in a Git Repository**: The script must be run inside a Git repository. Ensure you are in the correct directory.
+- **Common Issues**: If you encounter issues with generating the README, ensure that all dependencies are installed correctly and that you are using the correct command syntax.
+- **Node Version Conflicts**: Ensure you are using a compatible version of Node.js as specified in the prerequisites.
 
 ## Contributing
-Contributions are welcome! Please adhere to the following guidelines:
-- Follow the existing coding style and conventions.
-- Submit pull requests for any changes or enhancements.
-- Ensure that your code is well-documented and tested.
+Contributions are welcome! If you would like to contribute to `readme-maker`, please follow these guidelines:
+- Ensure your code adheres to the project's coding standards.
+- Write clear and concise commit messages.
+- Open a pull request with a detailed description of your changes.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
